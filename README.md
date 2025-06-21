@@ -81,6 +81,15 @@ sphinx-build -b html docs docs/_build
 
 Both examples will produce a `sitemap.xml` alongside the HTML output.
 
+## Running the tests
+
+Install the development dependencies and run `pytest` from the project root:
+
+```bash
+pip install -e .[dev]
+pytest
+```
+
 ## Why
 
 Search engines often crawl every file of a Sphinx build, including sources and
