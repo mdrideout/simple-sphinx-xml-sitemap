@@ -4,3 +4,4 @@ examples/docs/_build/
 *.egg-info/
 .venv/
 .vscode/
+.DS_Store
