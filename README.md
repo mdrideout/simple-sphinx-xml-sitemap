@@ -89,7 +89,7 @@ and run the tests with `pytest -q`:
 ```bash
 uv venv
 source .venv/bin/activate
-uv pip install -e .[dev]
+uv pip install -e ".[dev]"
 pytest -q
 ```
 
