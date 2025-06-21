@@ -21,7 +21,7 @@ TODO: Using with standard `sphinx-build` commands
 
 ```bash
 # Example of use here
-$ command
+$ sphinx-build -b html docs docs/_build
 ```
 
 ### Deployment Builds:
