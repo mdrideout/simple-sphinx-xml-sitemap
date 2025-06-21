@@ -7,3 +7,5 @@ Welcome to the Hello World example project.
    :maxdepth: 1
 
    usage
+   api
+   pyproject

@@ -1,13 +1,19 @@
-"""Simple hello world package."""
 
-def say_hello() -> str:
-    """Return a hello world message."""
-    return "Hello, world!"
+"""Simple hello world package providing a small library."""
+
+
+class HelloWorld:
+    """Utility class to print a hello world message."""
+
+    @staticmethod
+    def say_hello() -> None:
+        """Print ``"Hello, world!"`` to standard output."""
+        print("Hello, world!")
 
 
 def main() -> None:
-    """Print the hello message."""
-    print(say_hello())
+    """Demonstrate the :class:`HelloWorld` API by printing the message."""
+    HelloWorld.say_hello()
 
 if __name__ == "__main__":
     main()
