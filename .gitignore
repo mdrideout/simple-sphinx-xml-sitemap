@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+examples/docs/_build/
+*.egg-info/

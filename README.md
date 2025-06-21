@@ -1,40 +1,60 @@
 # Simple Sphinx XML Sitemap Extension
 
-This is a simpler XML sitemap generator extension for Sphinx documentation. It does not support internationalization or multiple languages.
+This project provides a minimal Sphinx extension that generates an XML sitemap
+for your documentation.  The extension inspects the navigation structure of your
+project and writes a `sitemap.xml` file after the HTML build step completes.
 
-## Getting Started:
+The extension does not support internationalisation or multiple languages, but
+it is suitable for most single language documentation sites.
 
-TODO: UV install, PIP install, Poetry install instructions
+## Installation
 
-TODO: adding to pyproject.toml dev dependencies
+Install from PyPI using `pip`:
 
-TODO: Adding to sphinx `conf.py` file
+```bash
+pip install simple-sphinx-xml-sitemap
+```
+
+Alternatively add it to your `pyproject.toml` or `requirements.txt` file.
+
+## Usage
+
+Add the extension to the `extensions` list in your Sphinx `conf.py` file and
+set `html_baseurl` to the public URL where the documentation will be hosted.
 
 ```python
 extensions = [
-    # Other extensions
-    "simple-sphinx-xml-sitemap",  # This extension
+    # other extensions
+    'simple_sphinx_xml_sitemap',
 ]
+
+html_baseurl = 'https://example.com/docs/'
 ```
 
-TODO: Using with standard `sphinx-build` commands
+Build your documentation as normal:
 
 ```bash
-# Example of use here
-$ sphinx-build -b html docs docs/_build
+sphinx-build -b html docs docs/_build
 ```
 
-### Deployment Builds:
+After the build completes a `sitemap.xml` file will be present in the output
+folder.
 
-TODO: adding to deployment requirements.txt (link to example) for cloudflare pages / static site builder hosts.
+## Example
 
-### Why?
+An example project is provided under `examples/docs`.  Change to that directory
+and run `sphinx-build` to see the extension in action.
 
-The default behavior of search engines like Google is to crawl all pages of the sphinx documentation, including files that do not make sense to crawl.
+```bash
+cd examples/docs
+sphinx-build -b html . _build
+```
 
-Without an XML Sitemap, it's hard to tell Google which pages are most important and relevant, because there is duplicate content on `_sources/` and `_modules/` pages.
+The generated site will contain `sitemap.xml` alongside the HTML output.
 
-### How
+## Why
 
-This Sphinx Documentation XML Sitemap generator generates a sitemap based on your actual navigable content pages, and a couple other standard critical Sphinx documentation pages.
-
+Search engines often crawl every file of a Sphinx build, including sources and
+module documentation pages that may not be useful.  Providing an XML sitemap
+allows you to indicate which pages are important and helps search engines index
+your documentation correctly.
