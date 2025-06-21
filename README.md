@@ -27,7 +27,7 @@ set `html_baseurl` to the public URL where the documentation will be hosted.
 ```python
 extensions = [
     # other extensions
-    'simple_sphinx_xml_sitemap',
+    'simple_sphinx_xml_sitemap', # note the user of underscores
 ]
 
 html_baseurl = 'https://example.com/docs/'
@@ -51,7 +51,7 @@ the extension. The project is configured as a uv workspace so these examples can
 declare `simple-sphinx-xml-sitemap` as a dependency in their own
 `pyproject.toml` files.
 
-### `docs`
+### docs
 
 This directory contains only a Sphinx project.  To build it run:
 
@@ -66,7 +66,7 @@ sphinx-build -b html . _build
 The example ``conf.py`` excludes the ``.venv`` directory created above so that
 Sphinx does not try to parse files inside the virtual environment.
 
-### `hello_world`
+### hello_world
 
 This example is a tiny Python package with a documentation folder and its own
 `pyproject.toml`.  Build the docs and install the package in editable mode:
