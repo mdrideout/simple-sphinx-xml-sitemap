@@ -18,7 +18,7 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://example.com"
+Homepage = "https://github.com/mdrideout/simple-sphinx-xml-sitemap"
 
 [tool.setuptools.packages.find]
 where = ["."]
