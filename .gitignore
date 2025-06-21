@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 examples/docs/_build/
+examples/hello_world/docs/_build/
 *.egg-info/
 .venv/
 .vscode/
