@@ -11,3 +11,7 @@ dependencies = [
 
 [tool.uv.sources]
 simple-sphinx-xml-sitemap = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = []
+bypass-selection = true
