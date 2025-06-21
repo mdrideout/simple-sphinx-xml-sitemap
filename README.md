@@ -42,11 +42,14 @@ sphinx-build -b html docs docs/_build
 After the build completes a `sitemap.xml` file will be present in the output
 folder.
 
-## Example
+## Examples
 
-An example project is provided under `examples/docs`.  Change to that
-directory, create a virtual environment with `uv`, install the extension, and
-build the documentation:
+The `examples/` directory contains small projects showing different ways to use
+the extension.
+
+### `docs`
+
+This directory contains only a Sphinx project.  To build it run:
 
 ```bash
 cd examples/docs
@@ -56,7 +59,21 @@ uv pip install -e ../..
 sphinx-build -b html . _build
 ```
 
-The generated site will contain `sitemap.xml` alongside the HTML output.
+### `hello_world`
+
+This example is a tiny Python package with a documentation folder and its own
+`pyproject.toml`.  Build the docs and install the package in editable mode:
+
+```bash
+cd examples/hello_world
+uv venv
+source .venv/bin/activate
+uv pip install -e .
+uv pip install -e ../..
+sphinx-build -b html docs docs/_build
+```
+
+Both examples will produce a `sitemap.xml` alongside the HTML output.
 
 ## Why
 
