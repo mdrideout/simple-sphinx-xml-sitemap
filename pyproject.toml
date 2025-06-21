@@ -4,18 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "simple-sphinx-xml-sitemap"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple Sphinx extension that generates an XML sitemap from navigation pages."
-authors = [{name = "Matthew Rideout"}]
+authors = [{ name = "Matthew Rideout" }]
 readme = "README.md"
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 requires-python = ">=3.8"
 dependencies = ["Sphinx>=4"]
 
 [project.optional-dependencies]
-dev = [
-    "pytest>=7",
-]
+dev = ["pytest>=7"]
 
 [project.urls]
 Homepage = "https://github.com/mdrideout/simple-sphinx-xml-sitemap"
