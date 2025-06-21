@@ -31,7 +31,9 @@ extensions = [
 html_baseurl = 'https://example.com/docs/'
 ```
 
-Build your documentation as normal:
+Build your documentation as normal.  The `sphinx-build` command becomes
+available after installing the project's dependencies (for example with
+`uv`):
 
 ```bash
 sphinx-build -b html docs docs/_build
@@ -42,11 +44,15 @@ folder.
 
 ## Example
 
-An example project is provided under `examples/docs`.  Change to that directory
-and run `sphinx-build` to see the extension in action.
+An example project is provided under `examples/docs`.  Change to that
+directory, create a virtual environment with `uv`, install the extension, and
+build the documentation:
 
 ```bash
 cd examples/docs
+uv venv
+source .venv/bin/activate
+uv pip install -e ../..
 sphinx-build -b html . _build
 ```
 
