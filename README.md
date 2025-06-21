@@ -45,7 +45,9 @@ folder.
 ## Examples
 
 The `examples/` directory contains small projects showing different ways to use
-the extension.
+the extension. The project is configured as a uv workspace so these examples can
+declare `simple-sphinx-xml-sitemap` as a dependency in their own
+`pyproject.toml` files.
 
 ### `docs`
 
@@ -55,7 +57,7 @@ This directory contains only a Sphinx project.  To build it run:
 cd examples/docs
 uv venv
 source .venv/bin/activate
-uv pip install -e ../..
+uv pip install -e .
 sphinx-build -b html . _build
 ```
 
@@ -72,7 +74,6 @@ cd examples/hello_world
 uv venv
 source .venv/bin/activate
 uv pip install -e .
-uv pip install -e ../..
 sphinx-build -b html docs docs/_build
 ```
 
