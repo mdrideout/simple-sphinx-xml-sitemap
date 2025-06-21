@@ -59,6 +59,9 @@ uv pip install -e ../..
 sphinx-build -b html . _build
 ```
 
+The example ``conf.py`` excludes the ``.venv`` directory created above so that
+Sphinx does not try to parse files inside the virtual environment.
+
 ### `hello_world`
 
 This example is a tiny Python package with a documentation folder and its own
