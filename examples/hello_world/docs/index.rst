@@ -8,4 +8,5 @@ Welcome to the Hello World example project.
 
    usage
    api
+   helpers
    pyproject
