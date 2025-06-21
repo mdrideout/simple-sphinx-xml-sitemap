@@ -16,19 +16,31 @@ logger = logging.getLogger(__name__)
 
 def _collect_nav_docnames(env) -> List[str]:
     """Return a list of document names reachable via toctrees."""
+
+    def is_hidden(name: str) -> bool:
+        """Return ``True`` if ``name`` includes a hidden path component."""
+        return any(part.startswith('.') for part in name.split('/'))
+
     docnames = set(env.tocs.keys())
     for doctree in env.tocs.values():
         for node in doctree.traverse(addnodes.toctree):
             for _, docname in node.get('entries', []):
                 if docname:
                     docnames.add(docname)
-    return sorted(docnames)
+
+    visible = [d for d in docnames if not is_hidden(d)]
+    return sorted(visible)
 
 
 def _write_sitemap(app: Sphinx, docnames: List[str]) -> None:
     builder = app.builder
     base_url = app.config.html_baseurl
-    urls = [urljoin(base_url, builder.get_target_uri(docname)) for docname in docnames]
+    urls = []
+    for docname in docnames:
+        target = builder.get_target_uri(docname)
+        if target.startswith('.') or '/.' in target:
+            continue
+        urls.append(urljoin(base_url, target))
 
     root = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
     for url in urls:
