@@ -19,6 +19,6 @@ extensions = [
     'sphinx.ext.ifconfig',  # Conditional content based on configuration
 ]
 
-html_baseurl = 'https://example.com/hello/'
+html_baseurl = 'https://example.com/'
 
 # minimal settings for demonstration
