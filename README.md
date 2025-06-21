@@ -1,6 +1,6 @@
 # Simple Sphinx XML Sitemap Extension
 
-[![CI](https://github.com/mdrideout/simple-sphinx-xml-sitemap/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/<owner>/<repo>/actions/workflows/tests.yml)
+[![CI](https://github.com/mdrideout/simple-sphinx-xml-sitemap/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mdrideout/simple-sphinx-xml-sitemap/actions/workflows/tests.yml)
 
 This project provides a minimal Sphinx extension that generates an XML sitemap
 for your documentation.  The extension inspects the navigation structure of your
@@ -80,6 +80,18 @@ sphinx-build -b html docs docs/_build
 ```
 
 Both examples will produce a `sitemap.xml` alongside the HTML output.
+
+## Running the tests
+
+Create a virtual environment using `uv`, install the development dependencies,
+and run the tests with `pytest -q`:
+
+```bash
+uv venv
+source .venv/bin/activate
+uv pip install -e ".[dev]"
+pytest -q
+```
 
 ## Why
 

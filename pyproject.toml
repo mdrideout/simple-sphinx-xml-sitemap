@@ -12,8 +12,13 @@ license = {file = "LICENSE"}
 requires-python = ">=3.8"
 dependencies = ["Sphinx>=4"]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
 [project.urls]
-Homepage = "https://example.com"
+Homepage = "https://github.com/mdrideout/simple-sphinx-xml-sitemap"
 
 [tool.setuptools.packages.find]
 where = ["."]
