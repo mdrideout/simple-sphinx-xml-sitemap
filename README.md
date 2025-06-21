@@ -28,7 +28,7 @@ $ command
 
 TODO: adding to deployment requirements.txt (link to example) for cloudflare pages / static site builder hosts.
 
-## Why?
+### Why?
 
 The default behavior of search engines like Google is to crawl all pages of the sphinx documentation, including files that do not make sense to crawl.
 
