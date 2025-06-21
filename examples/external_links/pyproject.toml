@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "external-links-example"
+version = "0.1.0"
+dependencies = [
+    "simple-sphinx-xml-sitemap",
+]
+
+[tool.uv.sources]
+simple-sphinx-xml-sitemap = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = []
+bypass-selection = true

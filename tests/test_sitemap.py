@@ -37,3 +37,11 @@ def test_hello_world_example():
         'https://example.com/usage.html',
     ]
     assert _build_sitemap('examples/hello_world/docs') == expected
+
+
+def test_external_links_ignored():
+    expected = [
+        'https://example.com/index.html',
+        'https://example.com/page.html',
+    ]
+    assert _build_sitemap('examples/external_links/docs') == expected

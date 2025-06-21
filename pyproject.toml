@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "simple-sphinx-xml-sitemap"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple Sphinx extension that generates an XML sitemap from navigation pages."
 authors = [{ name = "Matthew Rideout" }]
 readme = "README.md"
