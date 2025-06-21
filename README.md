@@ -99,14 +99,3 @@ Search engines often crawl every file of a Sphinx build, including sources and
 module documentation pages that may not be useful.  Providing an XML sitemap
 allows you to indicate which pages are important and helps search engines index
 your documentation correctly.
-
-## Publishing to PyPI
-
-This project uses [trusted publishing](https://docs.pypi.org/trusted-publishers/using-a-publisher/)
-with the [`pypi-publish` GitHub Action](https://github.com/marketplace/actions/pypi-publish).
-To enable it:
-
-1. On PyPI, add this repository as a trusted publisher. Select the workflow file
-   `.github/workflows/publish.yml` and, if desired, specify the `pypi` environment.
-2. Push your changes to the `main` branch. The `CI` workflow will build the
-   package and the `Publish` workflow will upload the distribution to PyPI.
