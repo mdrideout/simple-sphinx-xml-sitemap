@@ -1,6 +1,3 @@
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../..'))
 
 project = 'Example'
 extensions = ['simple_sphinx_xml_sitemap']
