@@ -1,5 +1,7 @@
 # Simple Sphinx XML Sitemap Extension
 
+[![CI](https://github.com/mdrideout/simple-sphinx-xml-sitemap/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/<owner>/<repo>/actions/workflows/tests.yml)
+
 This project provides a minimal Sphinx extension that generates an XML sitemap
 for your documentation.  The extension inspects the navigation structure of your
 project and writes a `sitemap.xml` file after the HTML build step completes.
